@@ -43,11 +43,11 @@ user_api_key = st.sidebar.text_input(
 st.header("Let's Have Fun!")
 
 with st.expander("About this app"):
-    st.write("**AI (Large Language Model)-powered BI**. \
-    This innovative technology is designed to revolutionize the way businesses analyze \
-    and interpret data by leveraging the power of advanced artificial intelligence algorithms \
-    to generate insights and predictions in real-time. With Large Language Model-powered BI, \
-    businesses can make faster, more informed decisions that drive growth and profitability.")
+    st.write("**PELINDO AI (Large Language Model)-powered BI**. \
+    Power BI Dashboard ini dirancang dan dibangun oleh Team Data Scientist dari Divisi Transformasi Korporasi Manajemen Program (TKMP) PELINDO\
+   Dashboard ini akan digunakan untuk menganalisa Data Business Core Dari PELINDO \
+    Nantinya akan digunakan untuk menganalisa Data Operasional Bisnis Petikemas, Non petikemas, Jasa Logistik, Pengembangan Kawasan dan Jasa Maritim, \
+    Dashboard ini masih dalam tahap pengembangan.")
 
 col1, col2 = st.columns(spec=[7, 3], gap='large')
 
