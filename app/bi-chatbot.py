@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """
-author:     Ewen Wang
-email:      wolfgangwong2012@gmail.com
+author:     Ficky Alkarim
+email:      fickyalkarim1987@gmail.com
 license:    Apache License 2.0
 """
 import os
@@ -23,24 +23,24 @@ import module
 cm = sns.light_palette("green", as_cmap=True)
 
 st.set_page_config(
-     page_title="BI ChatBot",
-     page_icon="🐣",
+     page_title="PELINDO TKMP BI ChatBot",
+     page_icon="",
      layout="wide",
      initial_sidebar_state=st.session_state.get('sidebar_state', 'expanded')
      )
 st.session_state.sidebar_state = 'expanded'
 
-st.sidebar.header("🌮 Let's set it up!")
+st.sidebar.header("Let's Go")
 
-uploaded_file = st.sidebar.file_uploader("#### Upload 🖖🏼", type=["csv"])
+uploaded_file = st.sidebar.file_uploader("#### Upload", type=["csv"])
 
 user_api_key = st.sidebar.text_input(
-    label="#### Your OpenAI API key 👇🏼",
+    label="#### Your OpenAI API key",
     placeholder="Paste your openAI API key, sk-",
     type="password")
 
 
-st.header("🥝 Let's make BI easier and smarter!")
+st.header("Let's Have Fun!")
 
 with st.expander("About this app"):
     st.write("**AI (Large Language Model)-powered BI**. \
@@ -54,10 +54,10 @@ col1, col2 = st.columns(spec=[7, 3], gap='large')
 
 with col1:
 
-    st.subheader("🍕 Play with your data!")
+    st.subheader("Enjoy and Play with your data!")
 
     if uploaded_file :
-        st.write("### 🍩 Data preview")
+        st.write("###Data preview")
         with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
             tmp_file.write(uploaded_file.getvalue())
             tmp_file_path = tmp_file.name
@@ -89,10 +89,10 @@ with col1:
         col121, col122 = st.columns(spec=[3, 1], gap='medium')
 
         with col121:
-            profile = st.button('🙌🏼 Please show me the data profile.')
+            profile = st.button('Please show me the data profile.')
         
         with col122:
-            walker = st.button('🤟🏼 I wanna try it myself!')
+            walker = st.button('🤟🏼 I wanna input the data by myself!')
 
         if profile:
             import pandas_profiling
@@ -113,9 +113,9 @@ with col1:
 
 with col2: 
 
-    st.subheader("🍪 Talk to your data!")
+    st.subheader("Talk to your data!")
 
-    message("Hi there! 👋🏼 Set up your API KEY before talk!", avatar_style="big-smile")
+    message("Hi! Set up your API KEY before talk!", avatar_style="big-smile")
 
     if uploaded_file:
 
@@ -133,7 +133,7 @@ with col2:
                 st.session_state['generated'] = ["Hello! Ask me anything about " + uploaded_file.name + " 🤗"]
 
             if 'past' not in st.session_state:
-                st.session_state['past'] = ["Hey! 👋"]
+                st.session_state['past'] = ["Hey!"]
                 
             #container for the chat history
             response_container = st.container()
